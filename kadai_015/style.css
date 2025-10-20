@@ -1,0 +1,31 @@
+.blue {
+    color: skyblue;
+}
+
+.pink {
+    color: rgb(255, 192, 203);
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif; /* 指定フォント＋総称 */
+  font-size: 2rem;                         /* ルート要素（20px）の2倍＝40px */
+  letter-spacing: 1.2em;                   /* 文字の大きさに対して1.2倍の間隔 */
+  text-shadow: 2px 2px 4px gray;           /* 文字の影（例：右下にぼかし） */
+  border-bottom: 3px solid rgb(115, 115, 114); /* 下線 */
+}
+
+body{
+    font-family: Arial, Meiryo, sans-serif;
+    text-align: center;
+}
+
+html{
+    font-size: 20px;
+}
+
+#basic p {
+  font-weight: bold;
+}
+
+
+
