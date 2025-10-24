@@ -49,7 +49,7 @@ h2{
 
 h2::before{
     font-size: 25px;
-    content: "▪";
+    content: "●";
     color: rgb(239, 111, 139);
     margin-right: 8px;
 }
