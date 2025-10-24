@@ -1,0 +1,98 @@
+header{
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+h1{
+    margin: 0px;
+    color: rgb(255, 255, 255);
+}
+
+main{
+    margin: 10px;
+}
+
+#parent{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between; /* 水平方向中央 */
+}
+
+.contents{
+  flex-basis: 25%; /* 幅を親要素の25%に */
+  border: 3px solid rgb(238, 204, 204); /* 枠線 */
+  padding: 10px 15px; /* 上下10px、左右15pxの内側余白 */
+  margin: 20px 0;     /* 上下20px、左右0の外側余白 */
+  
+  display: flex;           /* 中の要素を中央揃えにする準備 */
+  flex-direction: column;
+  justify-content: space-between; /* 水平方向中央 */
+  align-items: center;     /* 垂直方向中央 */
+}
+
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;           /* 太字 */
+  color: rgb(97, 206, 249);   /* 文字色 */
+}
+
+.contents img {
+  margin: 10px 0;   /* 上下10px、左右0 */
+  width: 70%;       /* 幅70% */
+}
+
+h2{
+    font-size: 40px;
+    border-bottom: 3px dotted rgb(236, 122, 122);
+}
+
+h2::before{
+    font-size: 25px;
+    content: "●";
+    color: rgb(239, 111, 139);
+    margin-right: 8px;
+}
+
+
+p{
+    margin: 0px;
+    font-size: 20px;
+}
+
+body{
+    margin: 0px;
+}
+
+a{
+    font-size: 20px;
+    color: rgb(255, 255, 255); /* 通常時（白） */
+    text-decoration: none;     /* 下線を消したい場合 */
+}
+
+a:visited {
+  color: rgb(193, 234, 251); /* 訪問済み（淡い水色） */
+}
+
+a:hover {
+  color: rgb(245, 178, 168); /* ホバー時（淡いピンク） */
+}
+
+footer{
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  #parent {
+    flex-direction: column; /* 縦並びに変更 */
+  }
+}
