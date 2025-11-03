@@ -1,0 +1,130 @@
+/* ベーススタイル */
+body {
+  min-width: 375px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 垂直方向の中央揃え */
+  padding: 10px 20px;
+}
+
+
+
+/* PC用ナビゲーション (デフォルトで表示) */
+#nav-pc ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-pc li {
+  margin-left: 20px;
+}
+
+#nav-pc a {
+  text-decoration: none;
+  color:#333333;
+}
+
+/* 1. カーソルをかざしたとき（ホバー）: 下線を表示し、色を変更 */
+#nav-pc a:hover {
+  text-decoration: underline; /* 下線を表示 */
+  color: #ce933e; /* ホバー時の色 (SocialTechのブランドカラーを想定) */
+}
+
+/* 2. 選択して一度訪問したとき（訪問済み）: 色を変更 */
+#nav-pc a:visited {
+  color: #666666; /* 訪問済みのリンクの色（例: やや濃い灰色） */
+}
+
+
+/* SP用ナビゲーション（初期状態で非表示）*/
+#nav-sp {
+  background-color: #ce933e;
+  position: fixed; /* absolute から fixed に変更して画面全体を覆う */
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none; /* JSで開くときに block にする */
+  z-index: 100;
+  overflow-y: auto; /* コンテンツが画面を超えた場合にスクロール可能にする */
+}
+
+#nav-sp ul {
+  padding: 0;
+  margin-top: 0;
+}
+
+#nav-sp li {
+  list-style: none;
+}
+
+/* 閉じるボタン */
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* SPロゴ */
+#logo-sp {
+  display: block;
+  margin: 80px 0 30px 20px;
+}
+
+/* SPナビゲーションのリンク */
+#nav-sp a:link,
+#nav-sp a:visited,
+#nav-sp a:active {
+  color: #ffffff;
+}
+
+
+
+#nav-sp a.menu:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+#nav-sp .menu {
+  display: block;
+  margin: 0 20px;
+  height: 44px;
+  line-height: 44px; /* テキストを垂直中央に */
+  font-size: 16px;
+  background-image: url("images/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right center; /* 矢印を垂直中央に */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* 区切り線を追加 */
+}
+
+/* ハンバーガーメニューボタン (初期状態で非表示) */
+#menu-sp {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+/* --- レスポンシブデザイン --- */
+/* スマートフォン向けのスタイル (例: 768px未満) */
+
+
+  /* PCナビゲーションを非表示にし、SPナビゲーションのボタンを表示 */
+  #nav-pc {
+    display: none;
+  }
+
+  #menu-sp {
+    display: block; /* ハンバーガーメニューボタンを表示 */
+  }
+
+}
+
+#main-image{
+  width: 100%;
+  height: 100%;
+}
